@@ -5,7 +5,7 @@ const Login = () => {
   const { error, handleSubmit, nameRef, passRef, loading } = Logic();
 
   return (
-    <div className="flex w-screen h-screen items-center justify-center bg-gray-800">
+    <div className="flex w-screen min-h-screen items-center justify-center bg-gray-800">
       <div className="border-2 border-indigo-600 p-3 px-5 rounded-2xl flex flex-col items-center justify-center gap-5 bg-white lg:h-3/4 lg:justify-around ">
         <div className="w-full">
           <h1 className="text-center font-bold text-3xl tracking-wider p-2 border-b-2 border-indigo-600">
