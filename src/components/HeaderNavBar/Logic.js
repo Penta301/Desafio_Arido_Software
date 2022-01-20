@@ -17,7 +17,26 @@ const Logic = () => {
     return <Link to="/groups">Grupos</Link>;
   };
 
-  return { show, handleShow, handleRoute };
+  const headerNavBarAnimation = {
+    close: {
+      height: "0%",
+      transition: {
+        type: "spring",
+        duration: 1,
+        bounce: 0.5,
+      },
+    },
+    open: {
+      height: "72%",
+      transition: {
+        type: "spring",
+        duration: 1,
+        bounce: 0.5,
+      },
+    },
+  };
+
+  return { show, handleShow, handleRoute, headerNavBarAnimation };
 };
 
 export default Logic;

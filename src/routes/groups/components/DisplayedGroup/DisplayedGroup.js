@@ -6,15 +6,16 @@ import { AiOutlineUserAdd } from "react-icons/ai";
 import { IconContext } from "react-icons";
 
 const DisplayedGroup = ({ name, id, desc, users, setter, handleUser }) => {
+  console.log("DisplayedGroup");
   const { categories, userCategoryRef, userRef, cleanFunction } = Logic();
 
   return (
-    <motion.div
-      layoutId={id}
-      layout
-      className="fixed top-0 left-0 z-50 h-screen w-screen flex items-center justify-center p-5"
-    >
-      <motion.div className="bg-gray-800 text-white border-2 border-indigo-600 p-5 rounded-2xl flex flex-col gap-5 w-full lg:w-4/6">
+    <motion.div className="fixed top-0 left-0 z-50 h-screen w-screen flex items-center justify-center p-5">
+      <motion.div
+        layoutId={id}
+        layout
+        className="bg-gray-800 text-white border-2 border-indigo-600 p-5 rounded-2xl flex flex-col gap-5 w-full lg:w-4/6"
+      >
         <div className="border-b-2 border-indigo-600 w-full">
           <div className="w-full flex justify-between">
             <h2>El nombre del grupo es: {name}</h2>
@@ -65,7 +66,7 @@ const DisplayedGroup = ({ name, id, desc, users, setter, handleUser }) => {
             <input
               className="bg-transparent border-2 border-indigo-600 rounded-3xl px-2 outline-none"
               type="text"
-              placeholder="Nombre del usuario"
+              placeholder="Usuario para crear/editar"
               ref={userRef}
             />
             <Selector arr={categories} refSelector={userCategoryRef}></Selector>

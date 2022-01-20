@@ -7,15 +7,29 @@ body {
 }
 
 .hard-shadow {
-  box-shadow: 3.3px 3px 2.2px rgba(0, 0, 0, 0.051),
-    8px 7.2px 5.3px rgba(0, 0, 0, 0.073), 15.2px 13.5px 10px rgba(0, 0, 0, 0.09),
-    27px 24.1px 17.9px rgba(0, 0, 0, 0.107),
-    50.6px 45.1px 33.4px rgba(0, 0, 0, 0.129),
-    121px 108px 80px rgba(0, 0, 0, 0.18);
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.101),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.145),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.18),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.215),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.259),
+    100px 100px 80px rgba(0, 0, 0, 0.36);
+}
+
+.hard-shadow-high-demand {
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.101),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.145),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.18),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.215),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.259),
+    100px 100px 80px rgba(0, 0, 0, 0.36);
 }
 
 @media screen and (max-width: 1200px) {
   .hard-shadow {
     box-shadow: 21px 25px 80px rgba(0, 0, 0, 0.62);
+  }
+
+  .hard-shadow-high-demand {
+    box-shadow: none;
   }
 }

@@ -5,10 +5,9 @@ import HeaderNavBar from "../../components/HeaderNavBar/HeaderNavbar";
 import ListGroups from "./components/ListGroups/ListGroups";
 
 const Container = () => {
-  const { user } = useApi();
+  const { user, groups, setGroups } = useApi();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [groups, setGroups] = useState([]);
   const [layoutIdElement, setLayoutIdElement] = useState("");
 
   const nameRef = useRef();
@@ -58,25 +57,6 @@ const Container = () => {
 
     cb && cb();
   };
-
-  //const handleSubmit = async (e) => {
-  // e.preventDefault();
-
-  // try {
-  //   setError("");
-  //   setLoading(true);
-  //   const newBody = {
-  //     name: groupRef.current.value,
-  //   };
-  //   const data = await postApi(
-  //     `service/create_security_group/${user}`,
-  //     newBody
-  //   );
-  // } catch {
-  //   setError("Something went wrong");
-  // }
-  // setLoading(false);
-  //};
 
   return (
     <>

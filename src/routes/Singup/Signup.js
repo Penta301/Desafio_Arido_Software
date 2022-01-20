@@ -2,6 +2,7 @@ import Logic from "./Logic";
 import { Link } from "react-router-dom";
 
 function Signup() {
+  console.log("Signup");
   const { nameRef, passRef, confirmRef, handleSubmit, error, loading } =
     Logic();
 

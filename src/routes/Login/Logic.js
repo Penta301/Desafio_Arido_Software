@@ -1,13 +1,8 @@
 import { useRef, useState } from "react";
-import { useHistory } from "react-router-dom";
-import { useApi } from "../../context/ApiContext";
 
 function Logic() {
-  const { postApi } = useApi();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-
-  const history = useHistory();
 
   const nameRef = useRef();
   const passRef = useRef();
@@ -27,14 +22,11 @@ function Logic() {
         name: nameRef.current.value,
         password: passRef.current.value,
       };
-      const data = await postApi("get_user/", newBody);
 
-      if (data) {
-        localStorage.setItem("user", newBody.name);
-        history.push("/");
-      }
+      localStorage.setItem("user", newBody.name);
+      window.location.reload();
     } catch {
-      setError("Something went wrong");
+      setError("Algo fue mal");
     }
     setLoading(false);
   };

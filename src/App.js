@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
   const { user } = useApi();
 
-  console.log(user);
+  console.log("App");
   return (
     <Router>
       <Switch>
@@ -26,12 +26,18 @@ function App() {
           isAuth={user}
           routeRedirect="/login"
         />
-        <Route path="/login">
-          <Login></Login>
-        </Route>
-        <Route path="/signup">
-          <Signup></Signup>
-        </Route>
+        <ProtectedRouter
+          path="/login"
+          Component={Login}
+          isAuth={!user}
+          routeRedirect="/"
+        />
+        <ProtectedRouter
+          path="/signup"
+          Component={Signup}
+          isAuth={!user}
+          routeRedirect="/"
+        />
       </Switch>
     </Router>
   );
