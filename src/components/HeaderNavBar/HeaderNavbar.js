@@ -22,7 +22,12 @@ const HeaderNavbar = () => {
           {show && (
             <div className="w-full flex justify-around">
               {handleRoute()}
-              <button onClick={logOut}>Cerrar Sesion</button>
+              <button
+                onClick={logOut}
+                className="font-bold hover:text-indigo-600 hover:border-b-2 hover:border-indig-600 transition-colors duration-300 ease-out"
+              >
+                Cerrar Sesion
+              </button>
             </div>
           )}
         </motion.div>
@@ -30,7 +35,13 @@ const HeaderNavbar = () => {
           layout
           className="bg-gray-800 hard-shadow cursor-pointer flex items-center justify-center"
         >
-          <IconContext.Provider value={{ size: 30, color: "white" }}>
+          <IconContext.Provider
+            value={{
+              size: 30,
+              className:
+                "text-white cursor-pointer hover:text-indigo-600 transition-colors duration-300 ease-out",
+            }}
+          >
             <BsChevronDown onClick={handleShow}></BsChevronDown>
           </IconContext.Provider>
         </motion.div>

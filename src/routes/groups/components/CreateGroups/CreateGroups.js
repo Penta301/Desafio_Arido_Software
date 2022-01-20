@@ -1,5 +1,4 @@
-const Groups = ({ nameRef, descRef, createGroup, loading }) => {
-  console.log("CreateGroups");
+const Groups = ({ nameRef, descRef, createGroup, loading, error }) => {
   return (
     <div className="flex hard-shadow flex-col justify-center items-center gap-5 bg-gray-800 p-5 rounded-3xl text-white">
       <h1 className="border-b-2 border-indigo-600 w-full text-center text-2xl">
@@ -9,6 +8,11 @@ const Groups = ({ nameRef, descRef, createGroup, loading }) => {
         onSubmit={(e) => createGroup(e)}
         className="flex flex-col items-center gap-5 mb-9 lg:h-full lg:justify-evenly"
       >
+        {error && (
+          <div className="border-2  border-red-500 rounded-md p-3 bg-red-300">
+            <p className="uppercase tracking-wide text-white ">{error}</p>
+          </div>
+        )}
         <label htmlFor="name" className="text-xl font-light uppercase">
           Nombre
         </label>

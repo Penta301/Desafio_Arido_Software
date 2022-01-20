@@ -12,9 +12,23 @@ const Logic = () => {
 
   const handleRoute = () => {
     if (location.pathname !== "/") {
-      return <Link to="/">Casa</Link>;
+      return (
+        <Link
+          className="font-bold hover:text-indigo-600 hover:border-b-2 hover:border-indig-600 transition-colors duration-300 ease-out"
+          to="/"
+        >
+          Casa
+        </Link>
+      );
     }
-    return <Link to="/groups">Grupos</Link>;
+    return (
+      <Link
+        className="font-bold hover:text-indigo-600 hover:border-b-2 hover:border-indig-600 transition-colors duration-300 ease-out"
+        to="/groups"
+      >
+        Grupos
+      </Link>
+    );
   };
 
   const headerNavBarAnimation = {

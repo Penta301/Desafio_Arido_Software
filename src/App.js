@@ -4,12 +4,11 @@ import Signup from "./routes/Singup/Signup";
 import Home from "./routes/Home/Home";
 import Container from "./routes/groups/Container";
 import { useApi } from "./context/ApiContext";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 
 function App() {
   const { user } = useApi();
 
-  console.log("App");
   return (
     <Router>
       <Switch>

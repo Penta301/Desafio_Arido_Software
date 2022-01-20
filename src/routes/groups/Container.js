@@ -33,6 +33,7 @@ const Container = () => {
     nameRef.current.value = "";
     descRef.current.value = "";
     setLoading(false);
+    setError("");
   };
 
   const handleUser = (e, id, user, category, action, cb) => {

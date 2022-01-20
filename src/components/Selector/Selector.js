@@ -28,6 +28,7 @@ const Selector = ({ arr, refSelector }) => {
         >
           {arr.map((option) => (
             <motion.button
+              className="hover:text-indigo-600 focus:text-indigo-600 transition-color duration-300 ease-out"
               type="button"
               disabled={!show}
               variants={variants}
@@ -40,7 +41,11 @@ const Selector = ({ arr, refSelector }) => {
         </motion.div>
       </motion.div>
       <IconContext.Provider
-        value={{ size: 30, color: "white", className: "z-50 cursor-pointer" }}
+        value={{
+          size: 30,
+          className:
+            "text-white z-50 cursor-pointer hover:text-indigo-600 transition-colors duration-300 ease-out",
+        }}
       >
         <BsChevronDown onClick={handleShow}></BsChevronDown>
       </IconContext.Provider>

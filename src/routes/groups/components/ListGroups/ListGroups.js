@@ -7,7 +7,6 @@ const ListGroups = ({
   setLayoutIdElement,
   handleUser,
 }) => {
-  console.log("ListGroups");
   return (
     <AnimateSharedLayout type="crossfade">
       <AnimatePresence>
@@ -28,7 +27,7 @@ const ListGroups = ({
                 ></DisplayedGroup>
               );
             })}
-        <div className="w-screen h-screen flex flex-wrap justify-around items-start gap-5 p-5">
+        <div className="w-screen min-h-screen flex flex-wrap justify-around items-start gap-5 p-5">
           {groups.map((group, index) => {
             const { desc, name, id } = group;
             if (id === layoutIdElement) {
@@ -40,7 +39,7 @@ const ListGroups = ({
                 key={name + index}
                 layoutId={id}
                 onClick={() => setLayoutIdElement(id)}
-                className="bg-gray-800 hard-shadow-high-demand cursor-pointer p-5 flex flex-col gap-5 rounded-2xl text-white w-72 border-2 border-indigo-600 hover:text-gray-800 hover:bg-white"
+                className="bg-gray-800 hard-shadow-high-demand cursor-pointer p-5 flex flex-col gap-5 rounded-2xl text-white w-72 border-2 border-indigo-600 hover:text-gray-800 hover:bg-white transition-colors ease-out duration-300"
               >
                 <h3 className="text-2xl border-b-2 border-indigo-600">
                   {name}
